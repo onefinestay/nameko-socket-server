@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='nameko-socket-server',
@@ -8,7 +8,7 @@ setup(
     author='onefinestay',
     author_email='engineering@onefinestay.com',
     url='http://github.com/onefinestay/nameko-socket-server',
-    packages=find_packages(exclude=['test']),
+    py_modules=['nameko_socket_server'],
     install_requires=[
         "nameko>=2.0.0",
     ],
