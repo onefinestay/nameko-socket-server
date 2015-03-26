@@ -16,7 +16,7 @@ Usage
             return 'hello world'
 
 
-.. code-block:: shell
+.. code-block:: bash
 
     $ echo 'hello' | nc localhost 6000; echo
     hello world
