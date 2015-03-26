@@ -1,10 +1,19 @@
 #!/usr/bin/env python
+import os
+
 from setuptools import setup
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(here, 'README.rst')) as handle:
+    long_description = handle.read()
+
 
 setup(
     name='nameko-socket-server',
     version='0.1.0',
     description='Socket server entrypoints for nameko services',
+    long_description=long_description,
     author='onefinestay',
     author_email='engineering@onefinestay.com',
     url='http://github.com/onefinestay/nameko-socket-server',
