@@ -11,7 +11,7 @@ with open(os.path.join(here, 'README.rst')) as handle:
 
 setup(
     name='nameko-socket-server',
-    version='0.1.0',
+    version='0.1.1',
     description='Socket server entrypoints for nameko services',
     long_description=long_description,
     author='onefinestay',
