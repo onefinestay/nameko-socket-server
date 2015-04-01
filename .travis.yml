@@ -11,14 +11,6 @@ env:
 script:
   - tox -e $TOX_ENV
 
-notifications:
-  email: false
-  irc:
-    channels:
-      - chat.freenode.net#nameko
-    use_notice: true
-    skip_join: true
-
 deploy:
   provider: pypi
   user: onefinestay
