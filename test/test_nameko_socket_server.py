@@ -23,9 +23,9 @@ def test_server(container_factory):
     container.start()
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('', 6000))
-    sock.sendall('hello\n')
-    data = sock.recv(1024)
+    sock.connect(('127.0.0.1', 6000))
+    sock.sendall('hello\n'.encode('utf-8'))
+    data = sock.recv(1024).decode('utf-8')
     sock.close()
     assert data == 'hello world'
     container.stop()
@@ -39,9 +39,9 @@ def test_unknown_command(container_factory):
     container.start()
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('', 6000))
-    sock.sendall('unknown\n')
-    data = sock.recv(1024)
+    sock.connect(('127.0.0.1', 6000))
+    sock.sendall('unknown\n'.encode('utf-8'))
+    data = sock.recv(1024).decode('utf-8')
     sock.close()
     assert data == 'unknown command `unknown`'
 
