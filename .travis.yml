@@ -6,7 +6,9 @@ install:
   - pip install tox
 
 env:
-  - TOX_ENV=test
+  - TOX_ENV=py27
+  - TOX_ENV=py33
+  - TOX_ENV=py34
 
 script:
   - tox -e $TOX_ENV
